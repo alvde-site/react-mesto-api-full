@@ -1,0 +1,15 @@
+.auth-form__login-link {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-form__login-link:hover,
+.auth-form__login-link:active {
+  opacity: 0.6;
+}

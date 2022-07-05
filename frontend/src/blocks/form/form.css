@@ -1,0 +1,10 @@
+.form {
+  width: 358px;
+  position: relative;
+}
+
+@media (max-width: 935px) {
+  .form {
+    width: 238px;
+  }
+}

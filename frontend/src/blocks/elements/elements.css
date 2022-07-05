@@ -1,0 +1,11 @@
+.elements {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media (max-width: 935px) {
+  .elements {
+    grid-template-columns: 1fr;
+    max-width: 282px;
+  }
+}

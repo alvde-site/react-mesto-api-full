@@ -1,0 +1,14 @@
+.auth-form__field {
+  display: block;
+  height: 64px;
+}
+
+.auth-form__field:last-of-type {
+  margin: 0 0 216px;
+}
+
+@media (max-width: 935px) {
+  .auth-form__field:last-of-type {
+    margin: 0 0 173px;
+  }
+}

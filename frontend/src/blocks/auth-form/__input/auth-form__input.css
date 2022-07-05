@@ -1,0 +1,22 @@
+.auth-form__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 0;
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid #ccc;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  margin: 0 0 5px;
+}
+
+.auth-form__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ccc;
+}

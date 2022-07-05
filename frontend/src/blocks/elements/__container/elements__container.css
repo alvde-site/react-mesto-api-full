@@ -1,0 +1,15 @@
+.elements__container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px 17px;
+}
+
+@media (max-width: 935px) {
+  .elements__container {
+    grid-template-columns: 1fr;
+  }
+}

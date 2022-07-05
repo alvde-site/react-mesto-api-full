@@ -1,0 +1,12 @@
+.auth-form__signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+@media (max-width: 935px) {
+  .auth-form__signin {
+    padding-top: 20px;
+  }
+}

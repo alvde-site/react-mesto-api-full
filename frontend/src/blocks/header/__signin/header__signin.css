@@ -1,0 +1,10 @@
+.header__signin {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 935px) {
+  .header__signin {
+    margin: 0 27px 0 0;
+  }
+}

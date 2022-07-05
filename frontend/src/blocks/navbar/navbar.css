@@ -1,0 +1,8 @@
+.navbar {
+  display: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #545454;
+  text-align: center;
+  transition: 0.2s;
+  padding: 40px 0 40px;
+}

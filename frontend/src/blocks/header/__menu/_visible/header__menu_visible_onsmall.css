@@ -1,0 +1,5 @@
+@media (max-width: 935px) {
+  .header__menu_visible_onsmall {
+    display: block;
+  }
+}

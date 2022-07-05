@@ -1,0 +1,10 @@
+.auth-form__question {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  margin: 0;
+  padding-right: 6px;
+}

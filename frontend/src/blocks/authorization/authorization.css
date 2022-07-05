@@ -1,0 +1,9 @@
+.authorization {
+  padding-top: 60px;
+}
+
+@media (max-width: 935px) {
+  .auth-form {
+    padding-top: 40px;
+  }
+}

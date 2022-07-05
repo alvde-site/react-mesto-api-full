@@ -1,0 +1,12 @@
+.info-tooltip {
+  width: 358px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px 0 25px;
+}
+
+@media (max-width: 935px) {
+  .info-tooltip {
+    width: 244px;
+  }
+}

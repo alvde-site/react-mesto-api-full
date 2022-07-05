@@ -1,0 +1,17 @@
+.element__remove-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 19px;
+  border: none;
+  background: transparent url(../../../images/svg/remove-button.svg)
+    center/contain no-repeat;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.element__remove-button:hover {
+  opacity: 0.5;
+}

@@ -1,0 +1,11 @@
+.info-tooltip__image {
+  width: 120px;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 935px) {
+  .info-tooltip__image {
+    margin-bottom: 40px;
+  }
+}

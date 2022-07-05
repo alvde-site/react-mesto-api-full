@@ -1,0 +1,9 @@
+.navbar__login-link {
+  text-decoration: none;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a9a9a9;
+}
