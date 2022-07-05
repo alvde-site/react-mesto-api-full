@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const process = require('process');
 const { celebrate, Joi, errors } = require('celebrate');
 const validator = require('validator');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const NotFoundError = require('./errors/not-found-err');
 
 const usersRouter = require('./routes/users');
@@ -21,7 +22,7 @@ const validateURL = (value) => {
   return value;
 };
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3001 } = process.env;
 
 const app = express();
 
@@ -32,6 +33,8 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+app.use(requestLogger); // подключаем логгер запросов
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
@@ -56,6 +59,8 @@ app.use(auth);
 app.use('/users', usersRouter);
 
 app.use('/cards', cardsRouter);
+
+app.use(errorLogger);
 
 app.use(() => {
   throw new NotFoundError('Извините, я не могу это найти!');
