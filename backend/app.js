@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const process = require('process');
+const cors = require('cors');
 const { celebrate, Joi, errors } = require('celebrate');
 const validator = require('validator');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -25,6 +26,17 @@ const validateURL = (value) => {
 const { PORT = 3001 } = process.env;
 
 const app = express();
+
+const options = {
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://alvde-site.github.io',
+  ],
+  credentials: true, // эта опция позволяет устанавливать куки
+};
+
+app.use('*', cors(options)); // Подключаем первой миддлварой
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -10,6 +10,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
+      credentials: 'include',
     }).then(this._checkResponse);
   }
 
@@ -18,6 +19,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
+      credentials: 'include',
     }).then(this._checkResponse);
   }
 
@@ -29,6 +31,7 @@ class Api {
         name: name,
         about: about,
       }),
+      credentials: 'include',
     }).then(this._checkResponse);
   }
 
@@ -39,6 +42,7 @@ class Api {
         authorization: this._authorization,
         "Content-Type": "application/json",
       },
+      credentials: 'include',
       body: JSON.stringify({
         name: name,
         link: link,
@@ -52,6 +56,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
+      credentials: 'include',
     }).then(this._checkResponse);
   }
 
@@ -61,6 +66,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
+      credentials: 'include',
     }).then(this._checkResponse);
   }
 
@@ -70,6 +76,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
+      credentials: 'include',
     }).then(this._checkResponse);
   }
 
@@ -97,9 +104,10 @@ class Api {
 }
 
 export const ApiSet = new Api({
-  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-39",
+  baseUrl: "http://localhost:3001",
   headers: {
     authorization: "21b633d6-0242-4229-923c-a9cd21579f97",
     "Content-Type": "application/json",
   },
+  credentials: 'include',
 });
