@@ -2,23 +2,18 @@ class Api {
   constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
     this._headers = headers;
-    this._authorization = this._headers.authorization;
   }
 
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
-      headers: {
-        authorization: this._authorization,
-      },
+      headers: this._headers,
       credentials: 'include',
     }).then(this._checkResponse);
   }
 
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: {
-        authorization: this._authorization,
-      },
+      headers: this._headers,
       credentials: 'include',
     }).then(this._checkResponse);
   }
@@ -38,10 +33,7 @@ class Api {
   addCard({ name, link }) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
-      headers: {
-        authorization: this._authorization,
-        "Content-Type": "application/json",
-      },
+      headers: this._headers,
       credentials: 'include',
       body: JSON.stringify({
         name: name,
@@ -53,9 +45,7 @@ class Api {
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: "DELETE",
-      headers: {
-        authorization: this._authorization,
-      },
+      headers: this._headers,
       credentials: 'include',
     }).then(this._checkResponse);
   }
@@ -63,9 +53,7 @@ class Api {
   addLike(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: "PUT",
-      headers: {
-        authorization: this._authorization,
-      },
+      headers: this._headers,
       credentials: 'include',
     }).then(this._checkResponse);
   }
@@ -73,9 +61,7 @@ class Api {
   removeLike(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: "DELETE",
-      headers: {
-        authorization: this._authorization,
-      },
+      headers: this._headers,
       credentials: 'include',
     }).then(this._checkResponse);
   }
@@ -106,7 +92,6 @@ class Api {
 export const ApiSet = new Api({
   baseUrl: "http://localhost:3001",
   headers: {
-    authorization: "21b633d6-0242-4229-923c-a9cd21579f97",
     "Content-Type": "application/json",
   },
   credentials: 'include',
