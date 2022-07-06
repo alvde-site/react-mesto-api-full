@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -37,8 +37,6 @@ const options = {
   ],
   credentials: true, // эта опция позволяет устанавливать куки
 };
-
-console.log(process.env.NODE_ENV);
 
 app.use('*', cors(options)); // Подключаем первой миддлварой
 
