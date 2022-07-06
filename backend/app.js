@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const process = require('process');
 const cors = require('cors');
 const { celebrate, Joi, errors } = require('celebrate');
@@ -40,6 +41,7 @@ app.use('*', cors(options)); // Подключаем первой миддлва
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
