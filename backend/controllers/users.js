@@ -84,7 +84,12 @@ module.exports.login = (req, res, next) => {
         { expiresIn: '7d' },
       );
       // отправим токен, браузер сохранит его в куках
-      res.send({ token }); // если у ответа нет тела, можно использовать метод end
+      res
+        .cookie('jwt', token, {
+        // token - наш JWT токен, который мы отправляем
+          httpOnly: true,
+        })
+        .send({ token }); // если у ответа нет тела, можно использовать метод end
     })
     .catch(() => {
       // возвращаем ошибку аутентификации
@@ -103,7 +108,7 @@ module.exports.updateUser = (req, res, next) => {
       new: true, runValidators: true,
     },
   )
-    .then((user) => res.send({ data: user }))
+    .then((user) => res.send(user))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные при обновлении профиля'));
@@ -125,7 +130,7 @@ module.exports.updateUserAvatar = (req, res, next) => {
       new: true, runValidators: true,
     },
   )
-    .then((user) => res.send({ data: user }))
+    .then((user) => res.send(user))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные при обновлении профиля'));
