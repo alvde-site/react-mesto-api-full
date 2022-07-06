@@ -101,7 +101,7 @@ function App() {
           });
           return;
         }
-        history.push("/sign-in");
+        history.push("/signin");
         setIsInfoTooltipPopupOpen(true);
         setIsInfoTooltipData({
           image: success,
@@ -159,7 +159,7 @@ function App() {
   function onSignOut() {
     localStorage.removeItem("token");
     setLoggedIn(false);
-    history.push("/sign-in");
+    history.push("/signin");
   }
 
   function handleCardLike(card) {
@@ -301,7 +301,7 @@ function App() {
             onToggleMenu={handleToggleMenu}
             isToggleMenu={isToggleMenu}
           />
-          <Route path="/sign-up">
+          <Route path="/signup">
             <Register
               loggedIn={loggedIn}
               setLoggedIn={setLoggedIn}
@@ -314,7 +314,7 @@ function App() {
               buttonLoadingText="Регистрация..."
             />
           </Route>
-          <Route path="/sign-in">
+          <Route path="/signin">
             <Login
               loggedIn={loggedIn}
               setLoggedIn={setLoggedIn}
@@ -328,7 +328,7 @@ function App() {
             />
           </Route>
           <Route path="/">
-            {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in" />}
+            {loggedIn ? <Redirect to="/" /> : <Redirect to="/signin" />}
           </Route>
         </Switch>
         <EditProfilePopup

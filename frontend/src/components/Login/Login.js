@@ -20,7 +20,7 @@ function Login(props) {
 
   return (
     <>
-      <Header login="Регистрация" loggedIn={props.loggedIn} to="/sign-up" />
+      <Header login="Регистрация" loggedIn={props.loggedIn} to="/signup" />
       <div className="authorization">
         <form
           action="#"

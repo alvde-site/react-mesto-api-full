@@ -12,7 +12,7 @@ function Main(props) {
       <Header
         login="Выйти"
         loggedIn={props.loggedIn}
-        to="/sign-in"
+        to="/signin"
         email={props.email}
         onSignOut={props.onSignOut}
         onToggleMenu={props.onToggleMenu}

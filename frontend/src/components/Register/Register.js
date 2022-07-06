@@ -21,7 +21,7 @@ function Register(props) {
 
   return (
     <>
-      <Header login="Войти" loggedIn={props.loggedIn} to="/sign-in" />
+      <Header login="Войти" loggedIn={props.loggedIn} to="/signin" />
       <div className="authorization">
         <form
           action="#"
@@ -69,7 +69,7 @@ function Register(props) {
           </button>
           <div className="auth-form__signin">
             <p className="auth-form__question">Уже зарегистрированы?</p>
-            <Link to="/sign-in" className="auth-form__login-link">
+            <Link to="/signin" className="auth-form__login-link">
               Войти
             </Link>
           </div>
