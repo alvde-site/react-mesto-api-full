@@ -33,9 +33,10 @@ const options = {
   origin: [
     'http://localhost:3000',
     'http://localhost:3001',
-    'alvde-mesto.nomoredomains.sbs',
-    'api.alvde-mesto.nomorepartiesxyz.ru',
-
+    'http://alvde-mesto.nomoredomains.sbs',
+    'http://api.alvde-mesto.nomorepartiesxyz.ru',
+    'https://alvde-mesto.nomoredomains.sbs',
+    'https://api.alvde-mesto.nomorepartiesxyz.ru',
     'https://alvde-site.github.io',
   ],
   credentials: true, // эта опция позволяет устанавливать куки
