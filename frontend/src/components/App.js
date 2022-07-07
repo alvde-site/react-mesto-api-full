@@ -101,6 +101,14 @@ function App() {
           });
           return;
         }
+        if (res.message) {
+          setIsInfoTooltipPopupOpen(true);
+          setIsInfoTooltipData({
+            image: fail,
+            title: res.message,
+          });
+          return;
+        }
         history.push("/signin");
         setIsInfoTooltipPopupOpen(true);
         setIsInfoTooltipData({
