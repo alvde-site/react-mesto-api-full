@@ -11,6 +11,9 @@ module.exports = (req, res, next) => {
   // console.log('jwt', req.cookies.jwt)
   // const token = authorization.replace('Bearer ', '');
   const token = req.cookies.jwt;
+  if (!token) {
+    throw new UnauthorizedError('Нужно авторизоваться');
+  }
   let payload;
   try {
     // попытаемся верифицировать токен
