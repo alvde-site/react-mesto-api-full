@@ -16,5 +16,5 @@ node_modules
 .vscode
 
 # for dev
-build
+#build
 
